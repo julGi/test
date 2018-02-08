@@ -1,0 +1,1 @@
+https://developer.mozilla.org/fr/docs/Utilisation_des_web_workers
