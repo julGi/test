@@ -1,0 +1,33 @@
+Commandes NPM
+Actualisation de NPM :
+	npm install npm@latest -g
+
+Initialisation du package.json :
+	npm init -y
+	
+Installation d'un package dans package.json
+	npm install lodash@latest --save 		--> Installer la dernière version
+	--save-dev --> Uniquement pour le dev
+	npm install lodash@3 --save				-->Installer la version 3
+
+Lister les dépendances :
+	npm ls
+	
+Controler qu'il n'y a pa de nouvelles version d'une dépendances	:
+	npm outdated
+	
+MAJ d'une dépendance (Mise à jour corrective) :
+	npm update
+	
+Suppression d'une dépendance dans package.json :
+	npm uninstall --save lodash
+	
+Conversion de JS de ES6 vers ES5 :
+	npm install webpack -g    --> Installation de webpack pour pouvoir l'utiliser en tant que commande
+	npm install babel-core babel-loader babel-preset-es2015 webpack --save-dev
+	
+	Exécution de Webpack sans install globale : npx webpack
+	
+
+
+
