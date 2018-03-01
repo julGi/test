@@ -1,0 +1,24 @@
+Présentation ReactJs
+	http://blog.ippon.fr/2016/04/19/comment-bien-debuter-en-reactjs/
+
+		ReactJs TodoList
+			https://jsfiddle.net/kahnaar/52pa1z53/
+			
+		ReactJsRouting
+			https://jsfiddle.net/kahnaar/ufoj2644/
+	
+Create ReactJs App
+		https://github.com/facebook/create-react-app/blob/master/README.md#getting-started
+		
+Tuto :
+
+		https://medium.com/@patriciolpezjuri/using-create-react-app-with-react-router-express-js-8fa658bf892d
+
+		
+Morgan --> ExpressJs Logger : https://github.com/expressjs/morgan
+
+React starter app : 
+	https://github.com/kriasoft/react-starter-kit
+	
+	
+A voir : npm i nodemon -g --> Outil NodeMon	

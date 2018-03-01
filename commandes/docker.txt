@@ -1,0 +1,9 @@
+Docker :
+	1 Images --> N Containers
+	
+Lister les images : docker images
+Supprimer une image : docker rmi <<IMAGE ID>>
+
+Lister les containers : docker container ls --all
+Arrêter tous les containers : docker stop $(docker ps -a -q)
+Supprimer tous les containers : docker rm $(docker ps -a -q)
