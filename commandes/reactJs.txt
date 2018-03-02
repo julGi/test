@@ -13,7 +13,11 @@ Create ReactJs App
 Tuto :
 
 		https://medium.com/@patriciolpezjuri/using-create-react-app-with-react-router-express-js-8fa658bf892d
-
+		https://medium.com/web-application-development/date-3-react-js-and-rest-api-1b115dcedcb6
+		
+Intégration d'API REST dans NodeJS : 
+		http://www.tutorialspoint.com/nodejs/nodejs_restful_api.htm
+		
 		
 Morgan --> ExpressJs Logger : https://github.com/expressjs/morgan
 

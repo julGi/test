@@ -1,0 +1,21 @@
+{
+   "commands" : [{
+      "name" : "Julien G",
+	  "quantite" : 2,
+	  "prix_unitaire" : 7,
+	  "total": 14,
+      "etat":"PAYE_LIVRE"
+   },{
+      "name" : "Thomas B",
+	  "quantite" : 1,
+	  "prix_unitaire" : 7,
+	  "total": 7,
+      "etat":"PAYE_NON_LIVRE"
+   },{
+      "name" : "Noémie H",
+	  "quantite" : 3,
+	  "prix_unitaire" : 7,
+	  "total": 21,
+      "etat":"COMMANDEE"
+   }]
+}
