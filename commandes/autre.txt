@@ -1,2 +1,5 @@
 Création d'un fihier vide
 	touch test.txt
+	
+Affichage de l'arborescence d'un répertoire
+	tree -d .

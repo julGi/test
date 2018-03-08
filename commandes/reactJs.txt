@@ -26,3 +26,10 @@ React starter app :
 	
 	
 A voir : npm i nodemon -g --> Outil NodeMon	
+
+
+------------------------------------------------------------------
+
+Outil de création d'app React : create-react-app
+
+	
