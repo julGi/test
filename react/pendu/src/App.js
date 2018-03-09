@@ -4,28 +4,32 @@ import './App.css';
 
 import Score from './Score.js';
 import MaskedWord from './MaskedWord.js';
-import Letter from './Letter.js';
+import Button from './Button.js';
+
+import * as WordGenerator from './WordGenerator.js';
+
+const DEFAULT_STATE = {
+    maskedWord : WordGenerator.generateMaskedWord(),
+    usedLetters : new Set(),
+    findedLetters : "",
+}
 
 class App extends Component {
-  state = {
-      maskedWord : this.generateMaskedWord(),
-      usedLetters : new Set(),
-      score : 0,
+  constructor(props) {
+    super(props)
+    this.state = { ...DEFAULT_STATE }
   }
 
-  generateMaskedWord() {
-    return "TEST";
-  }
-
-  computeDisplay(phrase, usedLetters) {
+  computeDisplay(phrase, usedLetters, unknownCaracter = '_') {
     return phrase.replace(/\w/g,
-      (letter) => (usedLetters.has(letter) ? letter : '_')
+      (letter) => (usedLetters.has(letter) ? letter : unknownCaracter)
     )
   }
 
   letterClick = letter => {
-    const { usedLetters } = this.state
+    const { maskedWord, usedLetters } = this.state
     this.setState({ usedLetters: usedLetters.add(letter)})
+    this.setState({ findedLetters: this.computeDisplay(maskedWord, usedLetters, '') })
   }
 
   getLetterStatut = letter => {
@@ -33,9 +37,39 @@ class App extends Component {
     return usedLetters.has(letter) ? 'hidden' : 'visible'
   }
 
+  resetGame() {
+    this.setState(DEFAULT_STATE)
+    this.setState({usedLetters : new Set()})
+    this.setState({maskedWord : WordGenerator.generateMaskedWord()})
+  }
+
+  playRender() {
+    return "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('').map(letter => (
+      <Button
+        key={letter}
+        value={letter}
+        status={this.getLetterStatut(letter)}
+        onClick={this.letterClick} />
+    ));
+  }
+
+  winRender() {
+    return (
+      <div className="pendu-win-result">
+        <h1 className="pendu-title">Bravo, vous avez gagné !</h1>
+          <Button
+            value="Recommencer"
+            onClick={() => this.resetGame()} />
+      </div>
+    );
+  }
+
   render() {
-    const { maskedWord, usedLetters, score } = this.state
+    const { maskedWord, usedLetters, findedLetters } = this.state
     const visibleWord = this.computeDisplay(maskedWord, usedLetters)
+    const nbOfFindedDistinctLetters = new Set(findedLetters.split('')).size
+    const score = (nbOfFindedDistinctLetters * 2) - (usedLetters.size - nbOfFindedDistinctLetters)
+    console.log("render"+findedLetters+"-"+score+"-"+usedLetters.size)
     return (
       <div className="pendu">
         <header className="pendu-header">
@@ -44,13 +78,7 @@ class App extends Component {
         </header>
         <Score points={score} />
         <MaskedWord word={visibleWord}/>
-        {"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('').map(letter => (
-          <Letter
-            key={letter}
-            value={letter}
-            status={this.getLetterStatut(letter)}
-            onClick={this.letterClick} />
-        ))}
+        {maskedWord.length === findedLetters.length ? this.winRender() : this.playRender()}
       </div>
     );
   }

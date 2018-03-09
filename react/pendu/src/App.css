@@ -25,3 +25,9 @@
   width: 100%;
   text-align: center;
 }
+
+.pendu-win-result {
+  width: 100%;
+  margin-left: 80px;
+  margin-right:80px;
+}
