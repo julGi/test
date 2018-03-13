@@ -1,0 +1,19 @@
+.phrase .letter{
+  margin: 0 5px;
+}
+
+.letters{
+  display: flex;
+  flex-wrap: wrap;
+  width: 650px;
+  margin: auto;
+}
+
+.letters .btn {
+  margin: 5px;
+  width: 40px;
+}
+
+.App {
+  text-align: center;
+}
