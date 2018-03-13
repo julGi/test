@@ -21,15 +21,39 @@ Intégration d'API REST dans NodeJS :
 		
 Morgan --> ExpressJs Logger : https://github.com/expressjs/morgan
 
-React starter app : 
-	https://github.com/kriasoft/react-starter-kit
-	
-	
-A voir : npm i nodemon -g --> Outil NodeMon	
 
+A voir : npm i nodemon -g --> Outil NodeMon	
 
 ------------------------------------------------------------------
 
 Outil de création d'app React : create-react-app
+
+------------------------------------------------------------------
+
+React starter app : 
+	https://github.com/kriasoft/react-starter-kit
+	
+Les formulaires :
+	Détails sur la gestion des formulaires : https://reactjs.org/docs/forms.html
+	Champs non contrôlés : https://reactjs.org/docs/uncontrolled-components.html
+	
+Référentiels de composants React : 
+	Awesome React  : https://github.com/enaqx/awesome-react
+	Awesome React Components : https://github.com/brillout/awesome-react-components
+
+Tests unitaires :
+	https://facebook.github.io/jest/ : Jest, pour les options, la configuration, le détail des assertions prédéfinies, et les aspects avancés comme le module mocking.
+	http://chaijs.com/ : Chai, pour le détail des assertions prédéfinies, chaînes de langage et plugins disponibles.
+	http://airbnb.io/enzyme/ : Enzyme, pour le détail de l’API du Shallow Renderer, le fonctionnement du Mount Renderer si vous avez besoin du DOM, etc.
+	https://github.com/producthunt/chai-enzyme#readme : Chai-Enzyme, pour les assertions correspondantes fournies par le plugin
+	http://sinonjs.org/ : Sinon, pour le détail des système de spies, stubs et mocks, la simulation du temps et des accès réseau, et le super système de sandboxes.
+	https://github.com/domenic/sinon-chai#readme : Sinon-Chai, pour les assertions correspondantes fournies par le plugin.
+
+SCreencasts, didacticiels et livres :
+	https://openclassrooms.com/courses/tester-l-interface-de-son-site : Tester l’interface de son site est un cours en français de 6 chapitres sur OpenClassrooms, par Emily Reese, qui présente le test d’interfaces web à l’aide de Jasmine, dont la syntaxe d’assertions est très proche de celle de Jest.
+	https://egghead.io/courses/react-testing-cookbook : React Testing Cookbook est un cours vidéo gratuit de 38 minutes sur EggHead, par Trevor Miller ; il utilise l’outillage de base de Jest et React, sans Chai ni Enzyme.
+	https://www.udemy.com/learn-javascript-unit-testing-with-mocha-chai-and-sinon/ : Learn JS Testing with Mocha, Chai and Sinon est un cours vidéo de 40 minutes sur Udemy, par Tyler Pedley ; l’essentiel du code Mocha est transposable à Jest. Il coûte en général 10€.
+	https://jstesting.jcoglan.com/ : JavaScript Testing Recipes est un livre auto-publié de James Coglan, un grand monsieur des tests en JS, qui explore en détail la philosophie des tests en JS et les bonnes pratiques, quelle que soit la nature du code testé. Ne se préoccupe pas particulièrement de React, et utilise sa bibliothèque JSTest comme substrat. Une lecture incontournable à mon sens, beaucoup de bonnes idées et approches.
+
 
 	
