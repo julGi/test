@@ -29,6 +29,7 @@ A voir : npm i nodemon -g --> Outil NodeMon
 Outil de création d'app React : create-react-app
 
 ------------------------------------------------------------------
+====== FORMATION REACT OC
 
 React starter app : 
 	https://github.com/kriasoft/react-starter-kit
