@@ -1,0 +1,19 @@
+.center-elt {
+  text-align: center;
+}
+
+.margin-left-10 {
+  margin-left: 10px;
+}
+
+th.col1 {
+  width: 40%;
+}
+
+th.col2 {
+  width: 15%;
+}
+
+th.col3 {
+  width: 30%;
+}

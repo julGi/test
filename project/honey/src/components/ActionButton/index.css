@@ -1,0 +1,11 @@
+.tooltip-inner {
+  color: #000;
+  background-color: #fff;
+}
+
+.action-button {
+ padding-top: 2px;
+ padding-right: 4px;
+ padding-bottom: 4px;
+ padding-left: 2px;
+}
