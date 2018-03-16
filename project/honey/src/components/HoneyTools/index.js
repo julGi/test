@@ -4,8 +4,12 @@ import './index.css'
 
 import ActionButton from '../ActionButton';
 
-const HoneyTools = () => (
-  <ActionButton action='shopping'/>
-)
+class HoneyTools extends React.Component {
+  render() {
+    return (
+      <ActionButton action='shopping' onClick={() => console.log("Ouvre la fiche d'une nouvelle commande !")}/>
+    )
+  }
+}
 
 export default HoneyTools

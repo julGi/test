@@ -49,13 +49,21 @@ class ActionButton extends React.Component {
     )
   }
 
+  _clickEvent() {
+    if (this.props.onClick === undefined) {
+      this.setState({ alertShow: true })
+    } else {
+      this.props.onClick()
+    }
+  }
+
   render() {
     const { className } = this.props;
     let alertClose = () => this.setState({ alertShow: false });
     return (
       <span className={className}>
-        <OverlayTrigger placement="left" overlay={this._getTooltip(this.props.action)}>
-          <Button bsStyle="default" className="action-button" onClick={() => this.setState({ alertShow: true })}>
+        <OverlayTrigger placement="right" overlay={this._getTooltip(this.props.action)}>
+          <Button bsStyle="default" className="action-button" onClick={() => this._clickEvent()}>
             <img src={this._getIcon(this.props.action)} alt="" />
           </Button>
         </OverlayTrigger>
@@ -66,8 +74,9 @@ class ActionButton extends React.Component {
 }
 
 ActionButton.propTypes = {
-  action : PropTypes.oneOf(['shopping','modify','remove']).isRequired,
-  className : PropTypes.string,
+  action : PropTypes.oneOf(['shopping','modify','remove']).isRequired,  // Permet d'identifier le design et le tooltip du bouton
+  className : PropTypes.string, // Style complémentaire que l'on voudrait ajouter au bouton
+  onClick : PropTypes.func,     // Action du clic sur le bouton. Si ce n'est pas définit, une information de "dev en cours" apparait
 }
 
 export default ActionButton
