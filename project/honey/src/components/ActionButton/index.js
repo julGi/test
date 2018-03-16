@@ -4,12 +4,17 @@ import PropTypes from 'prop-types'
 import './index.css'
 
 import { Button, Tooltip, OverlayTrigger } from 'react-bootstrap'
+import ModalAlert from '../ModalAlert'
 
 import shopping from './shopping.svg'
 import modify from './modify.svg'
 import remove from './remove.svg'
 
 class ActionButton extends React.Component {
+
+  state = {
+    alertShow: false,
+  }
 
   _getIcon(action) {
     switch (action) {
@@ -46,13 +51,15 @@ class ActionButton extends React.Component {
 
   render() {
     const { className } = this.props;
+    let alertClose = () => this.setState({ alertShow: false });
     return (
       <span className={className}>
         <OverlayTrigger placement="left" overlay={this._getTooltip(this.props.action)}>
-          <Button bsStyle="default" className="action-button">
+          <Button bsStyle="default" className="action-button" onClick={() => this.setState({ alertShow: true })}>
             <img src={this._getIcon(this.props.action)} alt="" />
           </Button>
         </OverlayTrigger>
+        <ModalAlert show={this.state.alertShow} onHide={alertClose} />
       </span>
     )
   }
