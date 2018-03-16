@@ -13,3 +13,13 @@ Projet ReactJs permettant de suivre des commandes de pots de miel
 - Exécution du serveur Node : npm run start:server
 - Exécution de l'application React : npm start
 
+## TODO List
+
+- Bouchonner l'exécution des boutons
+- Créer une fiche de saisie
+- Envoi d'une commande au serveurNode
+- Actualisation de la liste après la saisie d'une commande
+- Gestion des états de la commandes
+ - Affichage de pictos dans la liste
+- Gérer une suppression logique de la commande
+- Faire une V2 de l'expérience utilisateur avec DnD switchable
