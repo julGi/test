@@ -41,6 +41,7 @@ Les formulaires :
 Référentiels de composants React : 
 	Awesome React  : https://github.com/enaqx/awesome-react
 	Awesome React Components : https://github.com/brillout/awesome-react-components
+	React Bootstrap : https://react-bootstrap.github.io/layout/grid/
 
 Tests unitaires :
 	https://facebook.github.io/jest/ : Jest, pour les options, la configuration, le détail des assertions prédéfinies, et les aspects avancés comme le module mocking.

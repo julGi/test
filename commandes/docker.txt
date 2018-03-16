@@ -1,5 +1,5 @@
 Docker :
-	1 Images --> N Containers
+	1 Image --> N Containers
 	
 Lister les images : docker images
 Supprimer une image : docker rmi <<IMAGE ID>>
